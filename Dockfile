@@ -1,0 +1,15 @@
+# Usando a imagem oficial mais recente do n8n
+FROM n8nio/n8n:latest
+
+# Definindo variáveis de ambiente (você vai configurar no Render)
+# N8N_ENCRYPTION_KEY → mesma do N8n Cloud
+# N8N_BASIC_AUTH_ACTIVE → true
+# N8N_BASIC_AUTH_USER → seu usuário
+# N8N_BASIC_AUTH_PASSWORD → sua senha
+# WEBHOOK_URL → URL pública do serviço Render ou Railway
+
+# Porta padrão que o n8n vai rodar
+EXPOSE 5678
+
+# Comando para iniciar o n8n
+CMD ["n8n", "start"]
